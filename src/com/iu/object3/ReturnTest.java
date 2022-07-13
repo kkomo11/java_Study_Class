@@ -29,9 +29,9 @@ public class ReturnTest {
 	
 	public int makeRandom() {
 		Random rand = new Random();
-		int num = rand.nextInt(50);
+		int num1 = rand.nextInt(50); //3
 		
-		return num;
+		return num1;
 	}
 	
 	//호출 시 숫자를 받아서 숫자만큼 랜덤한 수를 뽑아서 리턴
