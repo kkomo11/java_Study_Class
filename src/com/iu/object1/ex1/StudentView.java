@@ -12,4 +12,16 @@ public class StudentView {
 					+ stds[i].avg + "\t\t");
 		}
 	}
+	
+	public void viewOne(Student stds) {
+		System.out.println("이름\t\t번호\t\t국어\t\t영어\t\t수학\t\t총점\t\t평균\t\t");
+		System.out.println(stds.name+"\t\t"+stds.num+"\t\t"+stds.kor+"\t\t"
+				+ stds.eng + "\t\t" + stds.math + "\t\t" + stds.total + "\t\t"
+				+ stds.avg + "\t\t");
+		
+	}
+	
+	public void viewMessage(String text) {
+		System.out.println(text);
+	}
 }

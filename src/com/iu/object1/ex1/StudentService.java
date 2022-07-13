@@ -31,4 +31,24 @@ public class StudentService {
 		}
 		return stds;
 	}
+	// findStudent 메소드
+	// 검색하고 싶은 학생의 번호를 입력받아서,
+	// 같은 번호의 학생을 찾아서 그 학생을 리턴
+	// 없으면 null을 리턴
+	
+	public Student findStudent(Student[] stds) {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		Student std = new Student();
+		std = null;
+		System.out.println("검색할 학생의 번호를 입력하세요");
+		int index = sc.nextInt();
+		
+		for(int i=0; i<stds.length; i++) {
+			if(index == stds[i].num) {
+				std = stds[i];
+			}
+		}
+		return std;
+	}
 }
