@@ -26,14 +26,14 @@ public class StudentController {
 				stds = stdsc.makeStudents();
 				break;
 			case 2:
-				stdv.viewAll(stds);
+				stdv.view(stds);
 				break;
 			case 3:
 				Student std = stdsc.findStudent(stds);
 				if(std == null) {
-					stdv.viewMessage("해당 번호의 학생이 없습니다.");
+					stdv.view("해당 번호의 학생이 없습니다.");
 				} else {
-					stdv.viewOne(std);
+					stdv.view(std);
 				}
 				break;
 			case 4:
@@ -43,7 +43,6 @@ public class StudentController {
 				System.out.println(5);
 				break;
 			case 6:
-				System.out.println("종료");
 				check = !check;
 				break;
 			default:
