@@ -15,5 +15,12 @@ public class Object3Main1 {
 		for(int i=0; i<randNum.length; i++) {
 			System.out.println(randNum[i]);
 		}
+		
+		System.out.println("========================");
+		
+		Account acc = new Account();
+		acc = retest.makeAccount();
+		System.out.println("통장 이름: " + acc.title + "\n예금주: " + acc.host + "\n통장 번호: " 
+		+ acc.numbers + "\n잔액: " + acc.balance);
 	}
 }

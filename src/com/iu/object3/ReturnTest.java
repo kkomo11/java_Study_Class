@@ -1,8 +1,28 @@
 package com.iu.object3;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class ReturnTest {
+	//makeAccount 메소드
+	// 통장 개설 title host number balance 입력
+	
+	public Account makeAccount() {
+		Account acc = new Account();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("통장 개설");
+		System.out.println("통장 이름 입력");
+		acc.title = sc.next();
+		System.out.println("예금주명 입력");
+		acc.host = sc.next();
+		System.out.println("통장 번호 입력");
+		acc.numbers = sc.next();
+		System.out.println("잔액 입력");
+		acc.balance = sc.nextLong();
+		sc.close();
+		return acc;
+	}
+	
 	public void info() {
 		System.out.println("실행 후 그냥 종료");
 	}
