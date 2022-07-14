@@ -79,4 +79,35 @@ public class StudentService {
 		return addStds;
 	}
 	
+	// removeStudent 학생들의 정보를 받아서 
+	// 삭제하려는 학생의 번호를 입력받아 학생의 번호와 일치하는 학생을 삭제
+	// 남은 학생들의 정보를 리턴
+	
+	public Student[] removeStudent(Student[] stds) {
+		boolean check=false; int i=0;
+		Student[] delStds = new Student[stds.length-1];
+		System.out.println("삭제할 학생의 번호를 입력하세요");
+		int num=sc.nextInt();
+		for(i=0; i<stds.length; i++) {
+			if(num==stds[i].getNum()) {
+				check = !check;
+				break;
+			}
+		}
+		if(check) {
+			int index = 0;
+			for(int j=0; j<stds.length; j++) {
+				if(j==i) {
+					continue;
+				}
+				delStds[index] = stds[j];
+				index++;
+			}
+			stds = delStds;
+		} else {
+			System.out.println("해당 번호의 학생이 없습니다.");
+		}
+		
+		return stds;
+	}
 }

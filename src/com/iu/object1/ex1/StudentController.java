@@ -43,7 +43,7 @@ public class StudentController {
 				}
 				break;
 			case 4:
-				System.out.println(4);
+				stds = stdss.removeStudent(stds);
 				break;
 			case 5:
 				stds = stdss.addStudent(stds);
