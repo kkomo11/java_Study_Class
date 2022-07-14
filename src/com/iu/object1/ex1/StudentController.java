@@ -3,13 +3,19 @@ package com.iu.object1.ex1;
 import java.util.Scanner;
 
 public class StudentController {
+	Scanner sc;
+	StudentService stdss;
+	StudentView stdv;
+	Student[] stds;
+	
+	public StudentController() {
+		sc = new Scanner(System.in);
+		stdss = new StudentService();
+		stdv = new StudentView();
+	}
 	
 	public void start() { 
 		boolean check = true;
-		Student[] stds=null;
-		Scanner sc = new Scanner(System.in);
-		StudentService stdsc = new StudentService();
-		StudentView stdv = new StudentView();
 
 		while(check) {
 			System.out.println("1. 학생 정보 입력");
@@ -23,13 +29,13 @@ public class StudentController {
 			
 			switch(select) {
 			case 1:
-				stds = stdsc.makeStudents();
+				stds = stdss.makeStudents();
 				break;
 			case 2:
 				stdv.view(stds);
 				break;
 			case 3:
-				Student std = stdsc.findStudent(stds);
+				Student std = stdss.findStudent(stds);
 				if(std == null) {
 					stdv.view("해당 번호의 학생이 없습니다.");
 				} else {
@@ -40,7 +46,7 @@ public class StudentController {
 				System.out.println(4);
 				break;
 			case 5:
-				System.out.println(5);
+				stds = stdss.addStudent(stds);
 				break;
 			case 6:
 				check = !check;
