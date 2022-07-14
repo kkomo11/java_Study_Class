@@ -10,6 +10,14 @@ public class Student {
 	private double avg;
 	
 	
+	private int scoreCheck(int score) {
+		if(score < 0 || score > 100) {
+			return 0;
+		} else {
+			return score;
+		}
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -33,10 +41,7 @@ public class Student {
 	}
 
 	public void setKor(int kor) {
-		this.kor = 0;
-		if(kor>=0 && kor <=100) {
-			this.kor = kor;
-		}
+		this.kor = this.scoreCheck(kor);
 	}
 
 	public int getEng() {
@@ -44,10 +49,7 @@ public class Student {
 	}
 
 	public void setEng(int eng) {
-		this.eng = 0;
-		if(eng>=0 && eng <=100) {
-			this.eng = eng;
-		}
+		this.eng = this.scoreCheck(eng);
 	}
 
 	public int getMath() {
@@ -55,10 +57,7 @@ public class Student {
 	}
 
 	public void setMath(int math) {
-		this.math = 0;
-		if(math>=0 && math <=100) {
-			this.math = math;
-		}
+		this.math = this.scoreCheck(math);
 	}
 
 	public int getTotal() {
