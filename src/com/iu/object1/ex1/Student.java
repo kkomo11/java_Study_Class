@@ -8,7 +8,7 @@ public class Student {
 	private int math; 
 	private int total; 
 	private double avg;
-	
+
 	private int scoreCheck(int score) {
 		if(score < 0 || score > 100) {
 			return 0;
