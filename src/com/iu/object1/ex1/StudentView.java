@@ -7,17 +7,17 @@ public class StudentView {
 	public void view(Student[] stds) {
 		System.out.println("이름\t\t번호\t\t국어\t\t영어\t\t수학\t\t총점\t\t평균\t\t");
 		for(int i=0; i<stds.length; i++) {
-			System.out.println(stds[i].name+"\t\t"+stds[i].num+"\t\t"+stds[i].kor+"\t\t"
-					+ stds[i].eng + "\t\t" + stds[i].math + "\t\t" + stds[i].total + "\t\t"
-					+ stds[i].avg + "\t\t");
+			System.out.println(stds[i].getName()+"\t\t"+stds[i].getNum()+"\t\t"+stds[i].getKor()+"\t\t"
+					+ stds[i].getEng() + "\t\t" + stds[i].getMath() + "\t\t" + stds[i].getTotal() + "\t\t"
+					+ stds[i].getAvg() + "\t\t");
 		}
 	}
 	
 	public void view(Student stds) {
 		System.out.println("이름\t\t번호\t\t국어\t\t영어\t\t수학\t\t총점\t\t평균\t\t");
-		System.out.println(stds.name+"\t\t"+stds.num+"\t\t"+stds.kor+"\t\t"
-				+ stds.eng + "\t\t" + stds.math + "\t\t" + stds.total + "\t\t"
-				+ stds.avg + "\t\t");
+		System.out.println(stds.getName()+"\t\t"+stds.getNum()+"\t\t"+stds.getKor()+"\t\t"
+				+ stds.getEng() + "\t\t" + stds.getMath() + "\t\t" + stds.getTotal() + "\t\t"
+				+ stds.getAvg() + "\t\t");
 		
 	}
 	

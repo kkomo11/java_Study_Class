@@ -19,15 +19,15 @@ public class StudentService {
 		for(int i=0; i<count; i++) {
 			Student std = new Student();
 			System.out.println("학생의 이름을 입력하세요");
-			std.name = sc.next();
-			System.out.println(std.name + "학생의 번호를 입력하세요");
-			std.num = sc.nextInt();
-			System.out.println(std.name + "학생의 국어 점수를 입력하세요");
-			std.kor = sc.nextInt();
-			System.out.println(std.name + "학생의 영어 점수를 입력하세요");
-			std.eng = sc.nextInt();
-			System.out.println(std.name + "학생의 수학 점수를 입력하세요");
-			std.math = sc.nextInt();
+			std.setName(sc.next());
+			System.out.println(std.getName() + "학생의 번호를 입력하세요");
+			std.setNum(sc.nextInt());
+			System.out.println(std.getName() + "학생의 국어 점수를 입력하세요");
+			std.setKor(sc.nextInt());
+			System.out.println(std.getName() + "학생의 영어 점수를 입력하세요");
+			std.setEng(sc.nextInt());
+			System.out.println(std.getName() + "학생의 수학 점수를 입력하세요");
+			std.setMath(sc.nextInt());
 			stds[i] = std;
 			std.setTotal();
 		}
@@ -45,7 +45,7 @@ public class StudentService {
 		int index = sc.nextInt();
 		
 		for(int i=0; i<stds.length; i++) {
-			if(index == stds[i].num) {
+			if(index == stds[i].getNum()) {
 				std = stds[i];
 			}
 		}
@@ -62,15 +62,15 @@ public class StudentService {
 		Student[] addStds = new Student[stds.length+1];
 		Student std = new Student();
 		System.out.println("추가될 학생의 이름을 입력하세요");
-		std.name = sc.next();
-		System.out.println(std.name + "학생의 번호를 입력하세요");
-		std.num = sc.nextInt();
-		System.out.println(std.name + "학생의 국어 점수를 입력하세요");
-		std.kor = sc.nextInt();
-		System.out.println(std.name + "학생의 영어 점수를 입력하세요");
-		std.eng = sc.nextInt();
-		System.out.println(std.name + "학생의 수학 점수를 입력하세요");
-		std.math = sc.nextInt();
+		std.setName(sc.next());
+		System.out.println(std.getName() + "학생의 번호를 입력하세요");
+		std.setNum(sc.nextInt());
+		System.out.println(std.getName() + "학생의 국어 점수를 입력하세요");
+		std.setKor(sc.nextInt());
+		System.out.println(std.getName() + "학생의 영어 점수를 입력하세요");
+		std.setEng(sc.nextInt());
+		System.out.println(std.getName() + "학생의 수학 점수를 입력하세요");
+		std.setMath(sc.nextInt());
 		std.setTotal();
 		for(i=0; i<stds.length; i++) {
 			addStds[i] = stds[i];

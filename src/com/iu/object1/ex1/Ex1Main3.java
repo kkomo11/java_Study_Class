@@ -12,10 +12,10 @@ public class Ex1Main3 {
 			Student st = new Student();
 			stds[i] = st;
 			System.out.println("이름 입력");
-			stds[i].name = sc.next(); // a b c
+			stds[i].setName(sc.next()); // a b c
 		}
 		for(int i=0; i<stds.length; i++) {
-			System.out.println(stds[i].name); // a b c
+			System.out.println(stds[i].getName()); // a b c
 		}
 		sc.close();
 	}

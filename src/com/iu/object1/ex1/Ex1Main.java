@@ -14,7 +14,8 @@ public class Ex1Main {
 		for(int i=0; i<3; i++) {
 			std[i] = new Student();
 			System.out.println("이름 입력");
-			std[i].name = sc.next();
+			
+			std[i].setName(sc.next());
 		}
 	
 //		std1.name = "iu"; std1.num = 1; std1.kor = 90; std1.eng = 80; std1.math = 70;
@@ -26,7 +27,7 @@ public class Ex1Main {
 //				+ std1.avg + "\t\t");
 		
 		for(int i=0; i<3; i++) {
-			System.out.println(std[i].name);
+			System.out.println(std[i].getName());
 		}
 
 		sc.close();
